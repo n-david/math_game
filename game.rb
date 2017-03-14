@@ -1,6 +1,3 @@
-require('./player')
-require('./question')
-
 module MathGame
   class Game
 
@@ -20,12 +17,11 @@ module MathGame
       puts 'Game Started!'
       loop do
         new_question = Question.new
-        new_question.make_equation
         puts "Player #{@current_player}: What does #{new_question.value1} plus #{new_question.value2} equal?"
         answer = gets.chomp
         if new_question.answer.to_s != answer
           @players[@current_player - 1].lose_life
-          puts '***************************************noob alert***************************************'
+          puts "Player #{@current_player}: ***************************************noob alert***************************************"
         else
           puts 'correct!'
         end

@@ -1,7 +1,7 @@
 module MathGame
   class Player
+    attr_reader :lives, :number
 
-    attr_accessor :lives, :number
     def initialize(number)
       @number = number
       @lives = 3
