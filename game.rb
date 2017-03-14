@@ -33,7 +33,7 @@ module MathGame
           puts 'Good Bye!'
           break
         end
-        puts "P1: #{@players[0].lives}/3 vs P2: #{@players[1].lives}/3"
+        puts "P1: #{@players.first.lives}/3 vs P2: #{@players.last.lives}/3"
         puts '----- NEW TURN -----'
         @current_player += 1
         @current_player = 1 if @current_player == @players.length + 1
